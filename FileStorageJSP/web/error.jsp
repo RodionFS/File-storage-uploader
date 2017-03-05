@@ -5,13 +5,13 @@ import="filestorage.*"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
-		<title>Ошибка</title>
+		<title>Error</title>
 		<link type="text/css" rel="stylesheet" href="css/jdeveloper.css"/>
 		<style type="text/css">
 		</style>
 	</head>
 	<body>
-		<h3>Ошибка</h3>
+		<h3>Error</h3>
 		<hr>
 		<%
 			String errorMesasge = (String)request.getAttribute("ErrorMessage");
@@ -22,7 +22,7 @@ import="filestorage.*"%>
 				(
 					(exception != null) ?
 						StringMsgCorrector.RemoveJavaLangExceptionPrefix(exception.toString()) :
-						"Неизвестная ошибка"
+						"Unknown error"
 				)
 		%>
 	</body>
