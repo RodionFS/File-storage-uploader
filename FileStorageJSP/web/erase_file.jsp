@@ -5,21 +5,21 @@ import="filestorage.filehandle.*, filestorage.*"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
-		<title>Удаление</title>
+		<title>Erase file</title>
 		<link type="text/css" rel="stylesheet" href="css/jdeveloper.css"/>
 		<style type="text/css">
 			body { background-color: #e1ffe1; }
 		</style>
 	</head>
 	<body>
-		<h3>Ошибка</h3>
-		<a href="index.jsp">Назад</a>
+		<h3>Error</h3>
+		<a href="index.jsp">Back</a>
 		<hr>
 		<%
 			String errorMessage = "";
 			boolean errorRedirect = false;
 			String fileName = null;
-			// Считываем из сессии
+			// Read from request
 			try
 			{
 				fileName = request.getParameter("filename");
@@ -36,13 +36,13 @@ import="filestorage.filehandle.*, filestorage.*"%>
 				errorRedirect = true;
 				response.sendRedirect("index.jsp");
 			}
-			// Удалить
+			// Erasing code
 			if (!errorRedirect)
 			{
-				if (FileUploadServlet.eraseFile(fileName)) // Файл удален
+				if (FileUploadServlet.eraseFile(fileName)) // File erased
 					response.sendRedirect("index.jsp");
 				else
-					errorMessage = "Во время удаления файла произошла ошибка. Проверьте наличие файла на диске вручную.";
+					errorMessage = "Error while erasing the file. Check this file on disk manually.";
 			}
 		%>
 		<font color="Red">
