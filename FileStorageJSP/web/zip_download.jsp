@@ -5,13 +5,13 @@ import="filestorage.filehandle.ZipDownloader"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
-		<title>Создание и загрузка ZIP-архива</title>
+		<title>Create and download ZIP-archive</title>
 		<link type="text/css" rel="stylesheet" href="css/jdeveloper.css"/>
 		<style type="text/css">
 		</style>
     </head>
     <body>
-		<h3>Создание и загрузка ZIP-архива</h3>
+		<h3>Create and download ZIP-archive</h3>
 		<hr>
 		<jsp:useBean id="zipDownloader"
 			class="filestorage.filehandle.ZipDownloader"
@@ -23,7 +23,7 @@ import="filestorage.filehandle.ZipDownloader"%>
 		<%=	msg %>
 		<br><br>
 		<%
-			out.println("<a href=\"files/zip/" + zipName + "\">Скачать</a>");
+			out.println("<a href=\"files/zip/" + zipName + "\">Download</a>");
 		%>
     </body>
 </html>
